@@ -85,6 +85,7 @@ public class SimpleHUD {
   public static void dismiss() {
     if (isContextValid() && dialog != null && dialog.isShowing()) dialog.dismiss();
     dialog = null;
+    context = null;
   }
 
   /**
