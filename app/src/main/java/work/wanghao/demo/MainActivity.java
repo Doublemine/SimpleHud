@@ -11,10 +11,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    SimpleHUD.backgroundHexColor = "#aa817EDF";
     Button showInfoMessage = (Button) findViewById(R.id.btn_info_message);
     Button showLoadingMessage = (Button) findViewById(R.id.btn_loading_message);
     Button showErrorMessage = (Button) findViewById(R.id.btn_error_message);
     Button showSuccessMessage = (Button) findViewById(R.id.btn_success_message);
+    Button empty = (Button) findViewById(R.id.btn_loading);
+    empty.setOnClickListener(this);
     showInfoMessage.setOnClickListener(this);
     showLoadingMessage.setOnClickListener(this);
     showErrorMessage.setOnClickListener(this);
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.btn_success_message:
         SimpleHUD.showSuccessMessage(this, "This a success message, and it's a long sentence!");
         break;
+      case R.id.btn_loading:
+        SimpleHUD.showLoadingMessage(this, SimpleHUD.dismissDelay + "", true);
     }
   }
 }

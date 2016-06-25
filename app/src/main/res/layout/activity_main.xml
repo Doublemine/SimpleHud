@@ -11,6 +11,13 @@
     >
 
   <Button
+      android:id="@+id/btn_loading"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:text="empty load msg"
+      >
+  </Button>
+  <Button
       android:id="@+id/btn_loading_message"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
